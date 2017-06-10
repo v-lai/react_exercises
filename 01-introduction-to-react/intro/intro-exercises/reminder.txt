@@ -1,0 +1,2 @@
+use "python -m SimpleHTTPServer 8000" to start Python server 
+to view part1-jsx.html & part2-jsx.html

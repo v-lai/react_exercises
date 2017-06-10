@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    div {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 10px;
+        padding: 5px;
+        border-radius: 10px;        
+    }
+
+    .red {
+        border: 1px solid red;
+    }
+
+    .blue {
+        border: 1px solid blue;
+    }
+
+    .green {
+        border: 1px solid green;
+    }
+</style>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/react@15/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+    <script>
+        // React is a global from the React library
+        var div = React.DOM.div; // let's create a div!
+        var h1 = React.DOM.h1;
+        var h3 = React.DOM.h3;
+        var p = React.DOM.p;
+
+        class Tweet extends React.Component {
+            render() {
+                return div(
+                    { className: this.props.color },
+                    null,
+                    p(null, "Date: " + this.props.date),
+                    h3(null, "Tweeter: " + this.props.username + " " + this.props.name),
+                    h3(null, "Message: " + this.props.message)
+                );
+            }
+        }
+
+        var App = (
+            div(null,
+                // now lets add our component!
+                h1(null, "Tweets"),
+                React.createElement(Tweet, { color: "red", username: "@dog", name: "Dog", date: "6-6-17", message: "Tweeting again!" }),
+                React.createElement(Tweet, { color: "blue", username: "@cat", name: "Cat", date: "7-12-16", message: "Warble warble warble" }),
+                React.createElement(Tweet, { color: "green", username: "@me", name: "Me", date: "9-30-14", message: "Hello World!" })
+            )
+        );
+
+        // lets put this on the DOM
+        ReactDOM.render(App, document.getElementById("app"));
+    </script>
+</body>
+
+</html>
