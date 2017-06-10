@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: #666;
+}
+
+h2 {
+  color: blue; 
+}
+
+p {
+  font-weight: bold;
+}
+
+.Pokecard {
+  display: inline-block;
+  min-width: 150px;
+  max-width: 200px;
+  text-align: center;
+  background: #ccc;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 15px;
+}
