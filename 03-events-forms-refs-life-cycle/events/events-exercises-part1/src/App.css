@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+}
+
+a {
+  color: blue;
+}
+
+a:hover {
+  background-color: yellow;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.enabled {
+  pointer-events: all;
+}
