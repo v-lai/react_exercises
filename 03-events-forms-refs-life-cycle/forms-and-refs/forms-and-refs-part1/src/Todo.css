@@ -1,0 +1,30 @@
+.todo {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: 1px solid #999;
+    margin: 5px auto;
+    padding: 5px;
+    text-align: left;
+}
+
+button {
+    border-radius: 100px;
+    border: none;
+    margin: 5px;
+    padding: 5px 8px;
+    cursor: pointer;
+    color: white;
+    font-size: 0.8em;
+}
+
+.complete {
+    background-color: royalblue;
+}
+
+.remove {
+    background-color: palevioletred;
+}
+
+.true {
+    background-color: #999;
+    text-decoration-line: line-through;
+}
