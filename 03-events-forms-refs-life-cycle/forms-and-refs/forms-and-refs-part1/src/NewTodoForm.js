@@ -23,7 +23,11 @@ export default class NewTodoForm extends Component {
     if (this.state.title !== '' && this.state.description !== '') {
       this.props.addTodo(this.state.title, this.state.description);
     }
-    e.target.reset();
+    this.setState({
+      title: '',
+      description: '',
+      check: false
+    });
   }
 
   render() {
