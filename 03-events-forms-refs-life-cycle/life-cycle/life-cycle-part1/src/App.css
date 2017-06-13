@@ -1,0 +1,30 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    color: white;
+}
+
+text {
+    color: black;
+    background-color: white;
+}
+
+.submit {
+    background-color: darkslategray;
+    border-color: darkslategray;
+    color: white;
+}
+
+.submit:active {
+    background-color: lightslategray;
+    border-color: lightslategray;
+    color: white;
+}
+
+.remove {
+    background-color: salmon;
+    border-color: salmon;
+}
