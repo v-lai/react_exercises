@@ -13,6 +13,11 @@ export default class App extends Component {
     this.removeAll = this.removeAll.bind(this);
   }
 
+  componentWillMount() {
+    const gifOfTheDay = ["kittens", "nyan cat", "pusheen", "garfield", "hello kitty"];
+    this.addGif(gifOfTheDay[Math.floor(Math.random() * gifOfTheDay.length)]);
+  }  
+
   addGif(searchTerm) {
     let newGiphys = this.state.giphys.slice();
     axios.get(`http://api.giphy.com/v1/gifs/search?q=${searchTerm}&api_key=dc6zaTOxFJmzC`)
